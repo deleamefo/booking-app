@@ -1,12 +1,14 @@
 package main
 
+import "fmt"
+
 func main() {
-	println("Hello world")
 
-	var conferenceName = "Go conference"
+	conferenceName := "Go conference"
 	const conferenceTickets = 50
-	var remainingTickets = 50
+	var remainingTickets = 23
 
-	print("Welome to %v booking application", conferenceName)
-	print("We have %v tickets remaining", remainingTickets)
+	fmt.Printf("Welome to %v booking application\n", conferenceName)
+	fmt.Printf("We have total of %v tickets and %v are still available.\n", conferenceTickets, remainingTickets)
+	fmt.Printf("Get your tickets here to attend")
 }
