@@ -43,7 +43,7 @@ func main() {
 
 		fmt.Printf("%v tickets reamining for %v\n", remainingTickets, conferenceName)
 
-		fmt.Printf("These are all the bookings available: %v\n", bookings)
+		fmt.Printf("These are all the bookings: %v\n", bookings)
 	}
 
 }
