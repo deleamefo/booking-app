@@ -7,10 +7,13 @@ func main() {
 	conferenceName := "Go conference"
 	const conferenceTickets int = 50
 	var remainingTickets uint = 23
+	var bookings [50]string
 
 	fmt.Printf("Welome to %v booking application\n", conferenceName)
 	fmt.Printf("We have total of %v tickets and %v are still available.\n", conferenceTickets, remainingTickets)
 	fmt.Println("Get your tickets here to attend")
+
+	var bookings = [50]string{"Amefo", "Tata", "Golang", "Golang"}
 
 	var firstName string
 	var lastName string
@@ -33,6 +36,7 @@ func main() {
 	// use this (remainingTickets - uint(userTickets) =..... or place uint on userTickets as 'var userTickets uint')
 
 	remainingTickets = remainingTickets - userTickets
+	bookings[0] = firstName + " " + lastName
 
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
 
