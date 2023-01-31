@@ -52,7 +52,7 @@ func main() {
 			var firstName = names[0]
 		}
 		fmt.Printf("These are all the bookings: %v\n", bookings)
-		fmt.Printf("These are all the bookings: %v\n", bookings)
+		
 	}
 
 }
