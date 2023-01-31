@@ -47,12 +47,18 @@ func main() {
 		fmt.Printf("%v tickets reamining for %v\n", remainingTickets, conferenceName)
 
 		firstNames := []string{}
-		for index, booking := range bookings {
+		for _, booking := range bookings { // ( _ = index)
 			var names = strings.Fields(booking)
-			var firstName = names[0]
+			firstNames = append(firstNames, names[0])
 		}
-		fmt.Printf("These are all the bookings: %v\n", bookings)
+		fmt.Printf("The first names of bookings are : %v\n", firstNames)
 
+		if remainingTickets == 0 { // no tickets remaining
+			// end program
+			fmt.Println("We have no tickets remaining. Come back next year!")
+			break
+
+		}
 	}
 
 }
