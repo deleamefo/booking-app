@@ -71,8 +71,16 @@ func main() {
 			}
 
 		} else {
-			fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets\n", remainingTickets, userTickets)
-			//continue
+			if !isValidName {
+				fmt.Println("First name or last name you entered is too short, pls try again.")
+			}
+			if !isValidEmail {
+				fmt.Println("Invalid email")
+			}
+			if !isValidTicketNumber {
+				fmt.Println("Number of tickets you entered is invalid")
+			}
+
 		}
 
 	}
