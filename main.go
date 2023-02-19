@@ -9,12 +9,12 @@ func main() {
 
 	conferenceName := "Go conference"
 	const conferenceTickets int = 50
-	var remainingTickets uint = 23
+	var remainingTickets uint = 50
 	bookings := []string{}
 
-	fmt.Printf("Welome to %v booking application\n", conferenceName)
-	fmt.Printf("We have total of %v tickets and %v are still available.\n", conferenceTickets, remainingTickets)
-	fmt.Println("Get your tickets here to attend")
+	greetUsers(conferenceName, conferenceTickets, remainingTickets)
+
+	//fmt.Printf("Welome to %v booking application\n", conferenceName)
 
 	//var bookings = [50]string
 	for {
@@ -51,18 +51,8 @@ func main() {
 
 			fmt.Printf("%v tickets reamining for %v\n", remainingTickets, conferenceName)
 
-			firstNames := []string{}
-			for _, booking := range bookings { // ( _ = index)
-				var names = strings.Fields(booking)
-				firstNames = append(firstNames, names[0])
-			}
-			fmt.Printf("The first names of bookings are : %v\n", firstNames)
-
-			// noTicketsRemaining := remainingTickets == 0 // Do this when the handling more than one if stmt
-			// if noTicketsRemaining { // no tickets remaining
-			// 	// end program
-			// 	fmt.Println("We have no tickets remaining. Come back next year!")
-			// 	break
+			// call function print first names
+			printFirstNames(bookings)
 
 			if remainingTickets == 0 { // no tickets remaining
 				// end program
@@ -84,5 +74,22 @@ func main() {
 		}
 
 	}
+
+}
+
+// function calls
+func greetUsers(confName string, confTickets int, remainingTickets uint) {
+	fmt.Printf("Welcome to %v booking application\n", confName)
+	fmt.Printf("We have total of %v tickets and %v are still available.\n", confTickets, remainingTickets)
+	fmt.Println("Get your tickets here to attend")
+}
+
+func printFirstNames(bookings []string) {
+	firstNames := []string{}
+	for _, booking := range bookings { // ( _ = index)
+		var names = strings.Fields(booking)
+		firstNames = append(firstNames, names[0])
+	}
+	fmt.Printf("The first names of bookings are : %v\n", firstNames)
 
 }
