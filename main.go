@@ -61,7 +61,7 @@ func greetUsers(confName string, confTickets int, remainingTickets uint) {
 
 func getFirstNames(bookings []string) []string {
 	firstNames := []string{}
-	for _, booking := range bookings { // ( _ = index)
+	for _, booking := range bookings { // ( '_' = index )
 		var names = strings.Fields(booking)
 		firstNames = append(firstNames, names[0])
 	}
