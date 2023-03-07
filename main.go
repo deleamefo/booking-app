@@ -8,9 +8,11 @@ import (
 
 const conferenceTickets int = 50
 
-var conferenceName = "Go conference"
-var remainingTickets uint = 50
-var bookings = make([]UserData, 0) // bookings := []string{}
+var (
+	conferenceName        = "Go conference"
+	remainingTickets uint = 50
+	bookings              = make([]UserData, 0) // bookings := []string{}
+)
 
 type UserData struct {
 	firstName       string
